@@ -7,5 +7,16 @@ import com.sk.skala.myapp.myapp.domain.User;
 
 @Repository
 
+// JpaRepository<User, Long> 
+// 기본 제공 메서드 
+// findAll() 
+// findById() 
+// save(user)
+// deleteById(id)
+// existsById(id)
+// count() 
+
+// userRepository.findAll(); -> 은 내부적으로 hibernate를 통해 SQL을 실행한다. 
+
 public interface UserRepository extends JpaRepository<User, Long> {
 }

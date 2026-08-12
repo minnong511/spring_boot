@@ -37,6 +37,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController 
+// 이게 있어야 컨트롤러로 인식한다. 
 // 이 클래스를 REST API 요청용 컨트롤러로 지정, spring이 HelloController를 찾아서 객체로 만든다. 
 // Spring이 직접 객체를 생성하고 관리, Spring에서 중요한 IoC -> Inversion of Control 개념과 연결된다. 
 @RequestMapping("api") 
@@ -47,6 +48,7 @@ public class HelloController {
     // 그냥 Java 클래스 -> Spring이라고 특별한 문법의 클래스가 되는 것은 아니다. 
     // @ 을 붙이고서 특별한 역할을 부여한 것 
     @GetMapping("/hello") // HTTP의 GET 요청을 처리한다. 
+    // 이거 두 개 합쳐서 /api/hello 
     public Map<String, String> helloWorld() {
         // 접근 제한자 : public, Map<String, String> : 반환 타입, helloWorld : 메서드 이름, () -> 파라미타 없음 
         Map<String, String> response = new HashMap<>(); // Map<Key, Value> -> Map<String, String>

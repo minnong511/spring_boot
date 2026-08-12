@@ -8,14 +8,19 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
-@Table(name = "users")
+@Entity // JPA가 관리하는 Entity라는 뜻 
+@Table(name = "users") // users 테이블과 연결 
 @Getter
 @Setter
 // lombok? 
+// User 클래스
+//  ↓
+// users 테이블
+
+
 public class User {
 
-    @Id
+    @Id // 기본키 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
