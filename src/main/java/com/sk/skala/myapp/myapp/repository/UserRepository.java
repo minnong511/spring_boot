@@ -20,3 +20,4 @@ import com.sk.skala.myapp.myapp.domain.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 }
+
